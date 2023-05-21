@@ -31,8 +31,17 @@ nav{
     flex-wrap: wrap;
 }
 
-.logo{
-    width: 140px;
+
+
+.logo-txt{
+    font-size: 25px;
+    letter-spacing: 5px;
+    
+}
+.logo-txt span{
+    color: #ff004f;
+    font-weight: 700;
+    font-size: 30px;
 }
 nav ul li{
     display: inline-block;
@@ -372,6 +381,13 @@ nav .fas{
     .header-text h1 span{
         font-size: 30px;
     }
+    .logo-txt{
+        font-size: 17px;
+        letter-spacing: 2.5px;
+    }
+    .logo-txt span{
+        font-size: 25px;
+    }
     nav .fas{
         display: block;
         font-size: 25px;
@@ -401,6 +417,7 @@ nav .fas{
     /* About  */
     .sub-title{
         font-size: 40px;
+
     }
     .about-col-1, .about-col-2{
         flex-basis: 100%;
