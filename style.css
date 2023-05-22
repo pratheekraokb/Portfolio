@@ -156,12 +156,14 @@ nav ul li a:hover::after{
 
 /* <!-- --------------Services --------------- --> */
 
-#services{
+#certification{
     padding: 30px 0;
+    padding-top: 36px;
 }
 .services-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -169,27 +171,45 @@ nav ul li a:hover::after{
 .services-list div{
     background: #262626;
     padding: 40px;
+    padding-top: 20px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
 }
-.services-list div i{
-    font-size: 50px;
-    margin-bottom: 30px;
+.pill {
+	font-size: 14px;
+	font-family: system-ui;
+	padding: 0.5em 1em;
+	margin: 0.25em;
+	border-radius: 1em;
+	border: none;
+	outline: none;
+	background: #211f1f;
+	cursor: pointer;
+    margin-bottom: 5px;
+    color: whitesmoke;
 }
+
+
+
 .services-list div h2{
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .services-list div a{
     text-decoration: none;
-    color: #fff;
-    font-size: 12px;
+    color: rgb(230, 221, 221);
+    font-weight: 600;
+    font-size: 15px;
     margin-top: 20px;
     display: inline-block;
 }
+.services-list div a:hover{
+    color: #080808;
+}
+
 
 .services-list div:hover{
     background: #ff004f;
@@ -377,7 +397,7 @@ nav .fas{
 /* -------- css for small screens --------- */
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url('images/phone-background.png');
+        background-image: url('static/images/phone-background.png');
     }
     .header-text{
         margin-top: 100%;
@@ -397,6 +417,9 @@ nav .fas{
         font-size: 25px;
     }
     .work-list{
+        grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    }
+    .services-list{
         grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     }
     nav .fas{
