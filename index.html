@@ -136,10 +136,10 @@
                             E-CommerceX is a robust e-commerce website offering a user-friendly interface for customers to view products, post reviews, and read feedback. It features an efficient cart management system, automated billing, real-time order tracking, and intuitive product management for admins. Enjoy seamless shopping and effortless management with E-CommerceX.
                         </p>
                         <div>
-                            <a href="#">
+                            <a href="#" target="_blank">
                                 <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
-                            <a href="#">
+                            <a href="#" target="_blank">
                                 <i class="fa-solid fa-file-pdf"></i>
                             </a>
                         </div>
@@ -153,10 +153,10 @@
                             Collaborating with the HEXMOS team, we developed Pollify, a feature-rich fullstack web application. Built using Django, HTML, CSS, JavaScript, Ajax, and jQuery, Pollify empowers users to create polls, view them on the home page, filter polls by tags, explore detailed poll displays, and cast their votes. Our dedicated team, consisting of Lince Mathew, Shrijith Venkatramana, Varun Deshpande, and Athreya, worked diligently to bring this interactive polling platform to life.
                         </p>
                         <div>
-                            <a href="https://drive.google.com/file/d/1K7C8zIxfcShT2XrxfYFrCHmdUVR8uUlk/view" target="_blank">
+                            <a href="#" target="_blank">
                                 <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
                             </a>
-                            <a href="#" target="_blank">
+                            <a href="https://drive.google.com/file/d/1K7C8zIxfcShT2XrxfYFrCHmdUVR8uUlk/view" target="_blank">
                                 <i class="fa-solid fa-file-pdf"></i>
                             </a>
                         </div>
@@ -184,10 +184,76 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="work showMoreWorksDiv">
+                    <img src="/static/images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>KTU B.Tech CSE Resource Hub</h3>
+                        <p>
+                            A static website to help KTU Engineering Students (Kerala) inorder to have access to lab cycle programs. This website is made using HTML, CSS, Bootstrap.
+                            <br/>
+                            A student can download the code aswell as its algorithms. All these are arranged in systamatic manner which makes the user feel comfortable to use the site freely. 
+                            <br/>
+                            Other study materials are also present in this site.
+
+                        </p>
+                        <div>
+                            <a href="https://codingwithpratheek.netlify.app/" target="_blank">
+                                <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1CVkcbUpb2XuUxCyzV00S0apCpYVaMTX-/view" target="_blank">
+                                <i class="fa-solid fa-file-pdf"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work showMoreWorksDiv">
+                    <img src="/static/images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>KTU B.Tech CSE Resource Hub</h3>
+                        <p>
+                            A static website to help KTU Engineering Students (Kerala) inorder to have access to lab cycle programs. This website is made using HTML, CSS, Bootstrap.
+                            <br/>
+                            A student can download the code aswell as its algorithms. All these are arranged in systamatic manner which makes the user feel comfortable to use the site freely. 
+                            <br/>
+                            Other study materials are also present in this site.
+
+                        </p>
+                        <div>
+                            <a href="https://codingwithpratheek.netlify.app/" target="_blank">
+                                <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1CVkcbUpb2XuUxCyzV00S0apCpYVaMTX-/view" target="_blank">
+                                <i class="fa-solid fa-file-pdf"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="work showMoreWorksDiv">
+                    <img src="/static/images/work-1.png" alt="">
+                    <div class="layer">
+                        <h3>KTU B.Tech CSE Resource Hub</h3>
+                        <p>
+                            A static website to help KTU Engineering Students (Kerala) inorder to have access to lab cycle programs. This website is made using HTML, CSS, Bootstrap.
+                            <br/>
+                            A student can download the code aswell as its algorithms. All these are arranged in systamatic manner which makes the user feel comfortable to use the site freely. 
+                            <br/>
+                            Other study materials are also present in this site.
+
+                        </p>
+                        <div>
+                            <a href="https://codingwithpratheek.netlify.app/" target="_blank">
+                                <i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1CVkcbUpb2XuUxCyzV00S0apCpYVaMTX-/view" target="_blank">
+                                <i class="fa-solid fa-file-pdf"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
-            <a href="#" class="btn">See more</a>
+            <a class="btn" id="showMoreBtn" onclick="showMore()">Show More</a>
+            <a href="#portfolio" class="btn" id="showLessBtn" onclick="showLess()">Show Less</a>
         </div>
     </div>
 
@@ -225,6 +291,29 @@
         <p>Copyright © 2023 Pratheek Rao K B. Made with <i class="fa-solid fa-heart"></i> easy tutorials.com</p>
     </div>
     <script>
+
+        // Works 
+        document.getElementById('showLessBtn').style.display = "none";
+        const showMoreDivs = document.querySelectorAll('.showMoreWorksDiv');
+        showMoreDivs.forEach(div => {
+            div.style.display = 'none';
+        });
+        function showMore(){
+            document.getElementById('showMoreBtn').style.display = "none";
+            document.getElementById('showLessBtn').style.display = "block";
+            showMoreDivs.forEach(div => {
+                div.style.display = 'block';
+            });
+        }
+
+        function showLess(){
+            document.getElementById('showMoreBtn').style.display = "block";
+            document.getElementById('showLessBtn').style.display = "none";
+            showMoreDivs.forEach(div => {
+                div.style.display = 'none';
+            });
+        }
+
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
         function opentab(tabname){
