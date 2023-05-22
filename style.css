@@ -256,6 +256,10 @@ nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center;
 }
+.layer div{
+    display: flex;
+    gap:10px;
+}
 
 .work:hover img{
     transform: scale(1.1);
