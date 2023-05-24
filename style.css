@@ -16,10 +16,21 @@ body{
 #header{
     width:100%;
     height: 100vh;
-    background-image: url('/static/images/background.png');
+    background-image: url('/static/images/pratheek_background.png');
     background-size: cover;
     background-position: center;
 }
+#typing-effect::after {
+    content: '|';
+    animation: blink-caret 0.75s infinite;
+}
+
+@keyframes blink-caret {
+    50% {
+        opacity: 0;
+    }
+}
+
 
 .container{
     padding: 10px 10%;
@@ -76,12 +87,19 @@ nav ul li a:hover::after{
     font-size: 30px;
 
 }
+.header-text p{
+    font-size: 22px;
+}
 .header-text h1{
     font-style: 60px;
     margin-top: 20px;
 }
 .header-text h1 span{
     color: #ff004f;
+}
+.header-text h1 p{
+    font-size: 30px;
+    letter-spacing: 0.2rem;
 }
 
 /* <!-- --------------About --------------- --> */
@@ -233,7 +251,7 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    /* min-height: fit-content; */
+    min-height: fit-content;
     /* height: auto; */
 }
 .work img{
@@ -309,6 +327,9 @@ nav ul li a:hover::after{
 .btn:hover{
     background: #ff004f;
     cursor: pointer;
+}
+.tab-contents ul li span{
+    font-weight: bold;
 }
 
 /* -------- Contact --------- */
@@ -403,17 +424,30 @@ nav .fas{
 /* -------- css for small screens --------- */
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url('static/images/phone-background.png');
+        background-image: url('static/images/pratheek_phone.png');
     }
     .header-text{
+        position: absolute;
+        bottom: 10vh;
         margin-top: 100%;
-        font-size: 16px;
+        font-size: 18px;
+    }
+    .header-text p{
+        font-size: 20px;
     }
     .header-text h1{
-        font-size: 28px;
+        font-size: 27px;
+        text-shadow: 2px 2px 4px rgba(7, 7, 7, 0.5), -2px -2px 4px rgba(185, 180, 180, 0.5);
+        
     }
     .header-text h1 span{
-        font-size: 30px;
+        font-size: 28px;
+        font-style: italic;
+    }
+    .header-text h1 p{
+        font-size: 19px;
+        letter-spacing: 0.1rem;
+        
     }
     .logo-txt{
         font-size: 17px;
@@ -421,12 +455,35 @@ nav .fas{
     }
     .logo-txt span{
         font-size: 25px;
+        
     }
     .work-list{
         grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     }
+    
+    .work{
+        min-height: 65vh;
+    }
+    p.bigPara{
+        font-size: small;
+        
+    }
+    .bigContentDiv{
+        min-height: 75vh;
+    }
+   
     .services-list{
         grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    }
+    .services-list div h2{
+        font-size: 22px;
+    }
+    .services-list div section button{
+        font-size: 12px;
+    }
+
+    .services-list div ol li a{
+        font-size: 12px;
     }
     nav .fas{
         display: block;
@@ -456,8 +513,10 @@ nav .fas{
 
     /* About  */
     .sub-title{
-        font-size: 40px;
-
+        font-size: 35px;
+    }
+    .my-certifications{
+        font-size: 30px;
     }
     .about-col-1, .about-col-2{
         flex-basis: 100%;
