@@ -457,7 +457,9 @@ nav .fas{
     .header-text h1 span{
         font-size: 28px;
         font-style: italic;
+        color: gold;
     }
+    
     .header-text h1 p{
         font-size: 19px;
         letter-spacing: 0.1rem;
