@@ -519,6 +519,7 @@ nav .fas{
     nav ul li{
         display: block;
         margin: 25px;
+        
     }
     nav ul .fas{
         position: absolute;
@@ -559,3 +560,6 @@ nav .fas{
         
     }
 }
+
+
+
