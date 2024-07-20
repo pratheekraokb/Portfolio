@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="projectStyle.css">
+
+</head>
+
+<body>
+    <!-- <header>
+        <h1>My Projects</h1>
+    </header> -->
+
+    <section class="project">
+        <h2>Railway Track Defect Analyzer</h2>
+        <div class="project-description">
+            <h3>Overview:</h3>
+            <p>
+                I developed a website to analyze defects in railway tracks and predict maintenance needs. By
+                aggregating data from visual inspections and ultrasonic testing, the website provides a comprehensive
+                overview of track conditions. 
+            </p>
+
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Visual Representation of Defects</li>
+                <ul style="padding-left: 20px;">
+                    <li>OBS (One cross with red paint)</li>
+                    <li>IMR (Three crosses with red paint)</li>
+                </ul>
+                <li>Detailed Actions for Defect Classification</li>
+                <ul style="padding-left: 20px;">
+                    <li>Provides specific maintenance actions for each defect category</li>
+                    <li>Assists track maintenance personnel in decision-making</li>
+                </ul>
+                <li>Graphical and Tabular Data Analysis</li>
+                <ul style="padding-left: 20px;">
+                    <li>Includes a pie chart showing types of probes used for testing</li>
+                    <li>Displays data in both graphical and tabular formats</li>
+                </ul>
+            </ul>
+
+            <h3>Technologies Used:</h3>
+            <ul>
+                <li>Backend: Django Framework</li>
+                <li>Frontend: HTML, CSS, JavaScript</li>
+                <li>Database: MySQL</li>
+            </ul>
+
+
+
+
+
+
+            <!-- <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7133107093254918146" height="881" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe> -->
+
+            <p><a href="https://www.linkedin.com/posts/pratheekraokb_railwaytrackmaintenance-innovation-interdisciplinarycollaboration-activity-7195114360925478912-xWay?utm_source=combined_share_message&utm_medium=member_desktop"
+                    class="project-link">View Linkedin Post</a></p>
+
+            <h3>Images</h3>
+            <div class="image-container grid-container" id="image-container">
+                <!-- Populated in Javascript -->
+
+            </div>
+            <h3>Videos</h3>
+            <div class="video-container grid-container">
+
+                <!-- <div class="grid-item">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/HyO4i85VBnY?si=IwZdhi2UO9yDp-Yh"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div> -->
+                
+            </div>
+
+    </section>
+
+    <!-- <footer>
+        <p>&copy; 2024 My Projects</p>
+    </footer> -->
+    <script>
+        const jsonData = {
+            "images": [
+                "DataEntry.jpeg",
+                "Result.jpeg"
+            ]
+        };
+
+        const container = document.getElementById('image-container');
+
+        jsonData.images.forEach(image => {
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'grid-item';
+
+            const link = document.createElement('a');
+            link.href = `static/images/Train_Project/${image}`; // Link to larger image or detailed view
+            link.target = "_blank"; // Open link in new tab
+
+            const imgElement = document.createElement('img');
+            imgElement.src = `static/images/Train_Project/${image}`;
+            imgElement.alt = image;
+
+            link.appendChild(imgElement);
+            imgDiv.appendChild(link);
+            container.appendChild(imgDiv);
+        });
+    </script>
+
+
+
+</body>
+
+</html>
