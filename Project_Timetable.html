@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="projectStyle.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            border: 0;
+        }
+        .grid-container img {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <h1>My Projects</h1>
+    </header> -->
+
+    <section class="project">
+        <h2>Timetable Generation Project</h2>
+        <div class="project-description">
+            <h3>Overview:</h3>
+            <p>
+                Our team developed a comprehensive timetable generation project using Next.js for the frontend, Python
+                Django for the backend, and MySQL for the database. The system automates the creation of timetables for
+                both students and staff, significantly reducing manual effort and ensuring optimal allocation of classes
+                and resources. It features different access levels: Director, Principal, HOD, Tutor, and Faculty. Each
+                level has decreasing access rights, with the Director having the most control and the Faculty level
+                being limited to viewing only their subject timetable. For example, tutors can view all faculty
+                schedules for their assigned classes. The generated timetables can be downloaded in PDF format, offering
+                a convenient and user-friendly solution for all users.
+            </p>
+
+            <h3>Key Features:</h3>
+            <ul>
+                <li>User-Friendly Interface:</li>
+                <!-- <ul style="padding-left: 20px;">
+                    <li>OBS (One cross with red paint)</li>
+                    <li>IMR (Three crosses with red paint)</li>
+                </ul> -->
+                <li>Role-Based Access Control:</li>
+                <ul style="padding-left: 20px;">
+                    <li>
+                        Director Level: Full access to all timetables and administrative functions.
+                    </li>
+                    <li>
+                        Principal Level: Access to most functions, with slight restrictions compared to the Director.
+                    </li>
+                    <li>
+                        HOD Level: Access to department-specific timetables and faculty schedules.
+                    </li>
+                    <li>
+                        Tutor Level: Access to all faculty schedules for their assigned classes.
+                    </li>
+                    <li>
+                        Faculty Level: Access to view only their subject timetables.
+                    </li>
+                </ul>
+                <li>PDF Download</li>
+            </ul>
+
+            <h3>Technologies Used:</h3>
+            <ul>
+                <li>Backend: Django Framework</li>
+                <li>Frontend: Next JS</li>
+                <li>Database: MySQL</li>
+            </ul>
+
+            <h3>My Role:</h3>
+            <ul>
+
+                <li>Database Design and Backend Development</li>
+                <li>API Testing</li>
+                <li>Diagram Creation</li>
+                <ul style="padding-left: 20px;">
+                    <li>Created essential diagrams such as the Entity-Relationship (ER) diagram to visualize the
+                        database structure and relationships.</li>
+                    <li>Developed the access level table and diagram to define and illustrate the different user roles
+                        and their respective permissions within the system.</li>
+                    <li>Constructed working diagrams to represent the overall architecture and workflow of the project.
+                    </li>
+
+                </ul>
+
+            </ul>
+
+
+
+
+
+
+            <!-- <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7133107093254918146" height="881" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe> -->
+
+
+
+            <h3>Images</h3>
+            <div class="image-container grid-container" id="image-container">
+                <!-- Populated in Javascript -->
+
+            </div>
+            <h3>Videos</h3>
+            <div class="video-container grid-container">
+
+                <!-- <div class="grid-item">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/HyO4i85VBnY?si=IwZdhi2UO9yDp-Yh"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div> -->
+
+            </div>
+
+    </section>
+
+    <!-- <footer>
+        <p>&copy; 2024 My Projects</p>
+    </footer> -->
+    <script>
+        const jsonData = {
+            "images": [
+                "Time1.jpg",
+                "Time3.jpg",
+                "Time5.jpg",
+                "Time2.jpg",
+                "Time4.png",
+            ]
+        };
+
+        const container = document.getElementById('image-container');
+
+        jsonData.images.forEach(image => {
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'grid-item';
+
+            const link = document.createElement('a');
+            link.href = `static/images/Timetable_Project/${image}`; // Link to larger image or detailed view
+            link.target = "_blank"; // Open link in new tab
+
+            const imgElement = document.createElement('img');
+            imgElement.src = `static/images/Timetable_Project/${image}`;
+            imgElement.alt = image;
+
+            link.appendChild(imgElement);
+            imgDiv.appendChild(link);
+            container.appendChild(imgDiv);
+        });
+    </script>
+
+
+
+</body>
+
+</html>
