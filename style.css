@@ -448,6 +448,12 @@ nav .fas{
     }
     .header-text p{
         font-size: 20px;
+        /* color: yellow; */
+    }
+    .role-text{
+        color: white;
+        text-shadow: 2px 2px 4px rgba(7, 7, 7, 0.5), -2px -2px 4px rgba(185, 180, 180, 0.5);
+        font-weight: 400;
     }
     .header-text h1{
         font-size: 27px;
@@ -557,7 +563,7 @@ nav .fas{
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
-
+    
     .copyright{
         font-size: 14px;
         

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratheek Rao K B</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/64fe869a8b.js" crossorigin="anonymous"></script>
+    <style>
+        #header {
+            background-image: none;
+            height: auto;
+        }
+
+        .gallery {
+            width: 100%;
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            justify-content: space-evenly;
+            
+        }
+
+        .gallery-item {
+            flex: 1 0 auto;
+            box-sizing: border-box;
+        }
+
+        .gallery img,
+        .gallery video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .event-heading {
+            font-size: 1.3em;
+            margin-top: 20px;
+            padding-left: 10px;
+            letter-spacing: 1px;
+            color: goldenrod;
+        }
+
+
+        @media (min-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery img,
+            .gallery video {
+                width: 900px;
+                min-height: 500px;
+                /* max-height: auto; */
+                display: block;
+                object-fit:cover;
+            }
+
+            .event-heading {
+                padding-left: 10px;
+                font-size: 1.5em;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- --------------Header --------------- -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <img src="images/logo.png" class="logo" alt="logo"> -->
+                <div class="logo-txt"><span>P</span>ratheek <span>R</span>ao <span>K B</span></div>
+                <ul id="sidemenu">
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#certification">Certifications</a></li>
+                    <li><a href="index.html#portfolio">My Works</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+        </div>
+    </div>
+    <!-- Gallary -->
+    <!-- <div class="gallery" id="gallery">
+       
+       
+    </div> -->
+    <div id="gallery-container">
+
+    </div>
+
+    <!-- --------------Copyright --------------- -->
+    <div class="copyright">
+        <p>Copyright © 2023 Pratheek Rao K B.</p>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const galleryContainer = document.getElementById('gallery-container');
+            const images = {
+                "IEEE CS LBSCEK News Letter": {
+                    "images": ["1.jpeg", "2.jpeg"],
+                },
+                "MediHack Hackathon": {
+                    "images": ["5.jpeg","3.jpeg","4.jpeg"]
+                },
+                "Webinar on Full Stack Web Development & IEEE UPE Award": {
+                    "images": ["6.jpeg", "7.jpeg", "8.jpeg", "9.jpeg"]
+                },
+                "IEEE UPE Award Winner 2023": {
+                    "images": ["10.jpeg", "11.jpeg"]
+                },
+                "Selection to State Level of the Rural Innovators Meet 2023" : {
+                    "images": ["12.jpeg"]
+                },
+                "Smart India Internal Hackathon | 2023" : {
+                    "images": ["13.jpeg", "14.jpeg"]
+                },
+                "All India CS Society Meetup @Kochi | 2023" : {
+                    "images": ["16.jpeg","17.jpeg","18.jpeg"]
+                },
+            };
+
+            for (const [event, data] of Object.entries(images)) {
+                // Create and append event heading
+                const eventHeading = document.createElement('h2');
+                eventHeading.className = 'event-heading';
+                eventHeading.textContent = event;
+                galleryContainer.appendChild(eventHeading);
+
+                // Create gallery container for this event
+                const gallery = document.createElement('div');
+                gallery.className = 'gallery';
+
+                data.images.forEach(function (src) {
+                    const div = document.createElement('div');
+                    div.className = 'gallery-item';
+
+                    const anchor = document.createElement('a');
+                    anchor.href = `static/images/Gallery/${src}`;
+
+                    const img = document.createElement('img');
+                    img.src = `static/images/Gallery/${src}`;
+                    img.alt = `Image ${src}`;
+
+                    anchor.appendChild(img);
+                    div.appendChild(anchor);
+                    gallery.appendChild(div);
+                });
+
+                // Append the gallery to the container
+                galleryContainer.appendChild(gallery);
+            }
+        });
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>
