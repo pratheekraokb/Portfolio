@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="projectStyle.css">
+    <script src="https://kit.fontawesome.com/64fe869a8b.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- <header>
+        <h1>My Projects</h1>
+    </header> -->
+
+    <section class="project">
+        <h2><a href="/"><i class="fa-solid fa-circle-arrow-left"></i></a> Flames'24 - LBSCEK College Sports Website</h2>
+        <div class="project-description">
+            <h3>Overview:</h3>
+            <p>
+                I created a dynamic website for our college's annual athlete meet, Flames 2024, hosted on Vercel. The
+                site showcases all sports events, winners, and department-wise leaderboards. It also features a gallery
+                with embedded Instagram posts and an admin dashboard for managing results.
+            </p>
+
+            <h3>Key Features:</h3>
+            <ul>
+                <li>
+                    Hosted on Vercel.
+                </li>
+                <li>
+                    Showcases all sports events and results.
+
+                </li>
+                <li>
+                    Displays department-wise leaderboards.
+
+                </li>
+                <li>
+                    Features a gallery section with embedded Instagram posts.
+
+                </li>
+                <li>
+                    Includes an admin dashboard to manage winners.
+                </li>
+            </ul>
+
+            <h3>Technologies Used:</h3>
+            <ul>
+                <li>Backend: Django Framework</li>
+                <li>Frontend: HTML, CSS, JavaScript</li>
+                <li>Database: MySQL</li>
+            </ul>
+
+
+
+
+
+
+            <!-- <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7133107093254918146" height="881" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe> -->
+
+            <p><a href="https://flames24.vercel.app/" target="_blank" class="project-link">View Website</a></p>
+
+            <h3>Images</h3>
+            <div class="image-container grid-container" id="image-container">
+                <!-- Populated in Javascript -->
+
+            </div>
+            <h3>Videos</h3>
+            <div class="video-container grid-container">
+                <div class="grid-item">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/UMuE9kqX_zY?si=2blcNg4EX3ZFxYJz"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+    <!-- <footer>
+        <p>&copy; 2024 My Projects</p>
+    </footer> -->
+    <script>
+        const jsonData = {
+            "images": [
+                "f1.jpeg",
+                "f2.jpeg",
+                "f3.jpeg",
+                "f4.jpeg",
+                "f5.jpeg",
+                "f6.jpeg",
+                "f7.jpeg",
+                "f8.jpeg"
+            ]
+        };
+
+        const container = document.getElementById('image-container');
+
+        jsonData.images.forEach(image => {
+            const imgDiv = document.createElement('div');
+            imgDiv.className = 'grid-item';
+
+            const link = document.createElement('a');
+            link.href = `static/images/Flames24/${image}`; // Link to larger image or detailed view
+            link.target = "_blank"; // Open link in new tab
+
+            const imgElement = document.createElement('img');
+            imgElement.src = `static/images/Flames24/${image}`;
+            imgElement.alt = image;
+
+            link.appendChild(imgElement);
+            imgDiv.appendChild(link);
+            container.appendChild(imgDiv);
+        });
+    </script>
+
+
+
+</body>
+
+</html>
