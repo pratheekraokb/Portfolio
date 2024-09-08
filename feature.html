@@ -133,6 +133,9 @@
         document.addEventListener('DOMContentLoaded', function () {
             const galleryContainer = document.getElementById('gallery-container');
             const images = {
+                "Notable Works (Database and Project Design)": {
+                    "images" : ["27.png","28.jpeg","24.jpg","25.jpg"]
+                },
                 "B-Tech Engineering, Academic Achievements": {
                     "images" : ["23.jpeg","22.jpeg", "21.jpg", "20.jpeg", "19.jpeg"]
                 },
@@ -157,6 +160,7 @@
                 "All India CS Society Meetup @Kochi | 2023" : {
                     "images": ["16.jpeg","17.jpeg","18.jpeg"]
                 },
+
             };
 
             for (const [event, data] of Object.entries(images)) {
